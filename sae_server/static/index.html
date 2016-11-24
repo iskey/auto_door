@@ -1,49 +1,33 @@
-﻿$def with(status_xie, status_li)
+﻿$def with(key, status)
 
 <!DOCTYPE html>
 <HTML>
 <HEAD>
 <meta http-equiv="content-type" content="text/html;charset=" />
-<TITLE>title</TITLE>
+<TITLE>AutoDoor</TITLE>
 </HEAD>
-<BODY>
-
-<FORM METHOD=POST action="../article/status" name="frm11">
-<INPUT TYPE="text" NAME="name" id="name" value="xie" hidden>
-<INPUT TYPE="submit" value="Trigger">
-</FORM>
-
-<table>
-<tr></tr>
-</table>
+<BODY bgcolor=#BDB76B align="center">
 
 <FORM METHOD=POST action="../article/verify" name="frm1">
-<img src="../static/xie.png" alt=""/>
-NAME <INPUT TYPE="text" NAME="name" id="name" value="xie" readonly>
-STATUS <INPUT TYPE="text" NAME="status" id="status" value=$status_xie readonly>
-CODE <INPUT TYPE="text" NAME="txt_pas" id="txt_pas">
+<table align="center">
+<tr><td> </td></tr><tr><td> </td></tr><tr><td> </td></tr>
+<tr><td> </td></tr><tr><td> </td></tr><tr><td> </td></tr>
+<tr><td>
+> NAME  </td><td><INPUT TYPE="text" NAME="name" id="name" size="30" value=$key readonly>
+</td></tr>
+<tr><td>
+> STATUS </td><td><INPUT TYPE="text" NAME="status" id="status" size="30" value=$status readonly>
+</td></tr>
+<tr><td>
+> CODE </td><td><INPUT TYPE="text" NAME="txt_pas" size="30" id="txt_pas">
+</td></tr>
+<tr><td></td><td>
+<img src="../static/$(key).png" alt=""/>
+</td></tr>
+<tr><td> </td><td>
 <INPUT TYPE="submit" value="SubmitCode">
-</FORM>
-
-<table>
-<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+</td></tr>
 </table>
-
-<FORM METHOD=POST action="../article/status" name="frm22">
-<INPUT TYPE="text" NAME="name" id="name" value="li" hidden>
-<INPUT TYPE="submit" value="Trigger">
-</FORM>
-
-<table>
-<tr></tr>
-</table>
-
-<FORM METHOD=POST action="../article/verify" name="frm2">
-<img src="../static/li.png" alt=""/>
-NAME <INPUT TYPE="text" NAME="name" id="name" value="li" readonly>
-STATUS <INPUT TYPE="text" NAME="status" id="status" value=$status_li readonly>
-CODE <INPUT TYPE="text" NAME="txt_pas" id="txt_pas">
-<INPUT TYPE="submit" value="SubmitCode">
 </FORM>
 </BODY>
 </HTML>

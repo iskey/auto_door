@@ -98,8 +98,12 @@ class command_trigger:
 
 class home_index:
     def GET(self):
-
-        return render.index(get_db("xie","status"),get_db("li","status"))
+        data=web.input(name="",status=None)
+        key = data.get('key', None)
+        if key is not None:
+            return render.index(key, get_db(key,"status"))
+        else:
+            return "Please give me a paremeter."
 
 if __name__ == '__main__':
         app.run()
